@@ -1,0 +1,38 @@
+
+import java.util.Scanner;
+
+
+public class ejercicio2 {
+    public static void main(String[] args) {
+        
+        Scanner ing= new Scanner(System.in);
+        System.out.println("Sus ingresos: ");
+        double ingresos = ing.nextDouble();
+        
+        Scanner vehi= new Scanner (System.in);
+        System.out.println("cantidad de  vehiculos: ");
+        int vehiculos=vehi.nextInt();
+        
+        Scanner antVehi= new Scanner(System.in);
+        System.out.println("antiguedad de los vehiculos: ");
+        int antVehiculos=antVehi.nextInt();
+        
+        Scanner inmu=new Scanner(System.in);
+        System.out.println("cantidad de inmuebles: ");
+        int inmuebles=inmu.nextInt();
+        
+        Scanner ultCon=new Scanner(System.in);
+        System.out.println("cumple con la ultima condicion: (use true/false)");
+        boolean ultCondicion= ultCon.nextBoolean();
+        if(ultCondicion==true){
+            ultCondicion=true;
+        }
+        else ultCondicion=false;
+        
+        if((ingresos >= 489083)||(vehiculos >=3)||(inmuebles >= 3)||(ultCondicion==true)){
+            System.out.println("La persona pertenece al segmento de ingresos altos");
+        }
+        else System.out.println("La persona no pertenece al segmento de ingresos altos");
+    }
+    
+}
