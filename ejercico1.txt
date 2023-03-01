@@ -1,0 +1,27 @@
+
+public class ejercico1 {
+// imprimir numeros del 5 al 14
+    public static void main(String[] args) {
+        int next=4;
+        int back=15;
+        boolean decidir= false;
+        while (next<(back-1)){
+            if(decidir==false){
+                if (next%2!=0){
+                    System.out.println(next);  
+                }
+            }
+            else if(next%2==0){
+              System.out.println(next);  
+            }
+            next=next+1;
+        }
+        for (int i=14;i>4;i--){
+            if(i%2==0){
+                System.out.println(i);
+            }
+        }
+    }
+    
+}
+a
