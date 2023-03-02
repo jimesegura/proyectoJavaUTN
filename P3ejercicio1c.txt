@@ -1,0 +1,27 @@
+
+package practico3;
+import java.util.Scanner;
+public class ejercicio2c {
+
+    public static void main(String[] args) {
+//        dado un vector de números, y un número X, que sume todos los números > X y
+//retorne el resultado
+        int [] vectorNum= new int[5];
+        int num=2;
+        int suma=0;
+        Scanner n= new Scanner(System.in);
+        System.out.println("ingrese numero");
+        int valor= n.nextInt();
+        for(int i=0;i<vectorNum.length;i++){
+            vectorNum[i]=num;
+            num=num+2;
+        }
+        for(int i=0;i<vectorNum.length;i++){
+            if(vectorNum[i]>valor){
+                suma=suma+vectorNum[i];
+            }
+        }
+        System.out.println("La suma de los numeros mayores a "+valor+" es: "+suma);
+    }
+    
+}
