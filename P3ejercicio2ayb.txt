@@ -1,0 +1,27 @@
+
+package practico3;
+import java.util.Scanner;
+
+public class ejercicio2a {
+
+    public static void main(String[] args) {
+       char [] vectorABC= {'a','b','c','d','e','f','g','h',
+           'i','j','k','l','m','n','ñ','o','p','q','r','s',
+           't','u','v','w','x','y','z',}; 
+        Scanner texto=new Scanner(System.in);
+        System.out.println("ingrese texto");
+        String frase=texto.nextLine();
+        char [] vectorTexto=frase.toCharArray();
+        System.out.println(vectorTexto);
+         System.out.println(vectorABC);
+        String nuevaFrase=" ";
+        for (int i=0;i<vectorTexto.length;i++){
+            for(int j=0;j<vectorABC.length;j++){
+                if(vectorTexto[i]==vectorABC[j]){
+                    nuevaFrase=nuevaFrase+vectorABC[j+2];
+                }
+            }
+        }
+        System.out.println(nuevaFrase);
+    }
+}
