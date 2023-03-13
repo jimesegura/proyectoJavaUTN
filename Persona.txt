@@ -1,0 +1,14 @@
+
+package practico5;
+import java.time.LocalDate;
+public class Persona {
+    private String nombre;
+    private String apellido;
+    private LocalDate nacimiento;
+    
+    public Persona(String nombre,String apellido){
+        this.nombre=nombre;
+        this.apellido=apellido;
+        this.nacimiento=LocalDate.now();
+    }
+}

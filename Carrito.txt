@@ -1,0 +1,65 @@
+
+package practico5;
+import java.time.LocalDate;
+import java.util.Scanner;
+public class Carrito {
+    private Persona nuevaP;
+//    private Producto nuevoP1;
+//    private Producto nuevoP2;
+//    private Producto nuevoP3;
+    private Producto[] vectorProductos;
+    private LocalDate fechaCompra ;
+
+    public Carrito(Persona nuevaP,Producto vectorProductos[]){
+        this.nuevaP=new Persona("pepe","pipo");
+//        this.nuevoP1=new Producto("azucar",1,12.00);
+//        this.nuevoP2=new Producto("limon",3,10.00);
+//        this.nuevoP3=new Producto("leche",6,45.00);
+        this.vectorProductos=new Producto[3];
+        this.fechaCompra=LocalDate.now();
+    }
+    public Carrito(){
+        
+    }
+    
+    public Producto [] listaProductos(){
+        Producto [] vectorN = new Producto[3];
+        for(int i=0;i<3;i++){
+            Scanner n= new Scanner(System.in);
+            System.out.println("ingrese nombre del producto");
+            String nombre= n.nextLine();
+            Scanner cant= new Scanner(System.in);
+            System.out.println("ingrese cantidad");
+            int cantidad= cant.nextInt();
+            Scanner pre= new Scanner(System.in);
+            System.out.println("ingrese precio");
+            int precio= pre.nextInt();
+            Producto P=new Producto(nombre,cantidad,precio);
+            vectorN[i]=P;
+        }
+        vectorProductos=vectorN;
+        return vectorProductos;
+    }
+    
+    public int calcular(){
+    int suma=0;
+    for (int i=0;i<vectorProductos.length;i++){
+        int multi=0;
+        multi=vectorProductos[i].getCantidad()*vectorProductos[i].getPrecio();
+        suma= suma+multi;
+        multi=0;
+    }
+    return suma;
+    }
+    
+    public void Resumen(){
+        for(int i=0;i<vectorProductos.length;i++){
+            System.out.println(vectorProductos[i].getNombre());
+            System.out.println(vectorProductos[i].getCantidad());
+            System.out.println(vectorProductos[i].getPrecio());
+        }
+        System.out.println("total: "+this.calcular());
+    }
+}
+
+

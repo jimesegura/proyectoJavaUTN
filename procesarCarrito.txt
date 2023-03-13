@@ -1,0 +1,12 @@
+
+package practico5;
+
+public class procesarCarrito {
+
+    public static void main(String[] args) {
+        Carrito c1=new Carrito();
+        c1.listaProductos();
+        c1.Resumen();
+    }
+    
+}
